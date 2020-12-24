@@ -140,7 +140,7 @@ def load_clean_wd50k(name, subtype, maxlen=43) -> Dict:
     """
         :return: train/valid/test splits for the wd50k datasets
     """
-    assert name in ['wd50k', 'wd50k_100', 'wd50k_33', 'wd50k_66'], \
+    assert name in ['wd50k', 'wd50k_100', 'wd50k_33', 'wd50k_66','wd50k_100_new'], \
         "Incorrect dataset"
     assert subtype in ["triples", "quints", "statements"], "Incorrect subtype: triples/quints/statements"
 

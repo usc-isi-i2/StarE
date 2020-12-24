@@ -71,6 +71,22 @@ class DataManager(object):
                     return partial(load_clean_wd50k, name="wd50k_100", subtype="statements", maxlen=config['MAX_QPAIRS'])
                 else:
                     return partial(load_wd50k_100_statements, maxlen=config['MAX_QPAIRS'])
+        elif config['DATASET'] == 'wd50k_100_new':
+            if config['STATEMENT_LEN'] == 5:
+                if config['CLEANED_DATASET']:
+                    return partial(load_clean_wd50k, name="wd50k_100_new", subtype="quints")
+                else:
+                    return load_wd50k_100_quints
+            elif config['STATEMENT_LEN'] == 3:
+                if config['CLEANED_DATASET']:
+                    return partial(load_clean_wd50k, name="wd50k_100_new", subtype="triples")
+                else:
+                    return load_wd50k_100_triples
+            else:
+                if config['CLEANED_DATASET']:
+                    return partial(load_clean_wd50k, name="wd50k_100_new", subtype="statements", maxlen=config['MAX_QPAIRS'])
+                else:
+                    return partial(load_wd50k_100_statements, maxlen=config['MAX_QPAIRS'])
         elif config['DATASET'] == 'wd50k_33':
             if config['STATEMENT_LEN'] == 5:
                 if config['CLEANED_DATASET']:

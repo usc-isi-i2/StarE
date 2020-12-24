@@ -11,7 +11,7 @@ from typing import Optional, List, Union, Dict, Callable, Tuple
 
 Quint = namedtuple('Quint', 's p o qp qe')
 
-KNOWN_DATASETS = ['wd50k', 'wikipeople', 'wd50k_100', 'wd50k_33', 'wd50k_66', 'jf17k']
+KNOWN_DATASETS = ['wd50k', 'wikipeople', 'wd50k_100', 'wd50k_33', 'wd50k_66', 'jf17k','wd50k_100_new']
 RAW_DATA_DIR = Path('./data/raw_data')
 PARSED_DATA_DIR = Path('./data/parsed_data')
 
